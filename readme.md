@@ -16,6 +16,14 @@ To run this project, you will need to add the following environment variables to
 `REPO` The name of your repo
 
 
+## Installation
+
+Install RepoScrape with pip
+
+```bash
+  pip install -r requirements.txt
+```
+    
 ## Author
 
 - [@Akina](https://www.github.com/kaajjaak)
