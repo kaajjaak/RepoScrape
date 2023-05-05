@@ -28,6 +28,13 @@ def display_commits_last_24h(repo):
     print()
 
 
+def display_commits_last_h(repo, hours=1):
+    recent_commits = get_recent_commits(repo, get_commits_by_author, hours)
+    for contributor, commits in recent_commits.items():
+        print(f"Commits by {contributor}: {', '.join(commit.sha[:7] for commit in commits)}")
+    print()
+
+
 def display_commit_leaderboard(repo):
     commits_by_contributor = count_commits_by_contributor(repo, get_commits_by_author)
     contributors_sorted = sort_contributors_by_commits(commits_by_contributor)
